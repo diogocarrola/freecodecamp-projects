@@ -10,6 +10,7 @@
     border-style: solid;
     border-radius: 50%;
   }
+
 </style>
 
 <div class="container-fluid">
@@ -24,13 +25,13 @@
   <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/running-cats.jpg" class="img-responsive" alt="Three kittens running towards the camera.">
   <div class="row">
     <div class="col-xs-4">
-      <button class="btn btn-block btn-primary"><i class="fas fa-thumbs-up"></i> Like</button>
+      <button class="btn btn-block btn-primary"><i class="fa fa-thumbs-up"></i> Like</button>
     </div>
     <div class="col-xs-4">
-      <button class="btn btn-block btn-info"><i class="fas fa-info-circle"></i> Info</button>
+      <button class="btn btn-block btn-info"><i class="fa fa-info-circle"></i> Info</button>
     </div>
     <div class="col-xs-4">
-      <button class="btn btn-block btn-danger"><i class="fas fa-trash"></i> Delete</button>
+      <button class="btn btn-block btn-danger"><i class="fa fa-trash"></i> Delete</button>
     </div>
   </div>
   <p>Things cats <span class="text-danger">love:</span></p>
@@ -54,9 +55,17 @@
         <label><input type="radio" name="indoor-outdoor"> Outdoor</label>
       </div>
     </div>
-    <label><input type="checkbox" name="personality"> Loving</label>
-    <label><input type="checkbox" name="personality"> Lazy</label>
-    <label><input type="checkbox" name="personality"> Crazy</label>
+    <div class="row">
+      <div class="col-xs-4">
+        <label><input type="checkbox" name="personality"> Loving</label>
+      </div>
+      <div class="col-xs-4">
+        <label><input type="checkbox" name="personality"> Lazy</label>
+      </div>
+      <div class="col-xs-4">
+        <label><input type="checkbox" name="personality"> Crazy</label>
+      </div>
+    </div>
     <input type="text" placeholder="cat photo URL" required>
     <button type="submit">Submit</button>
   </form>
