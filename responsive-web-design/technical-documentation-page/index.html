@@ -3,17 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Technical Documentation</title>
+    <title>JavaScript Documentation</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav id="navbar">
-        <header>Documentation Topics</header>
-        <!-- Navigation links will go here -->
+    <nav id="navbar" role="navigation" aria-label="Main navigation">
+        <h1>JavaScript Documentation</h1>
+        <a class="nav-link" href="#Introduction">Introduction</a>
+        <a class="nav-link" href="#JavaScript_and_Java">JavaScript and Java</a>
+        <a class="nav-link" href="#Variables">Variables</a>
+        <a class="nav-link" href="#Data_Types">Data Types</a>
+        <a class="nav-link" href="#Functions">Functions</a>
     </nav>
-    
+
     <main id="main-doc">
-        <!-- Sections will go here -->
+        <section class="main-section" id="Introduction">
+            <header>Introduction</header>
+            <p>JavaScript is a cross-platform, object-oriented scripting language.</p>
+            <p>It is a small and lightweight language.</p>
+            <code>console.log("Hello World");</code>
+            <p>JavaScript contains a standard library of objects.</p>
+            <ul>
+                <li>Client-side JavaScript</li>
+                <li>Server-side JavaScript</li>
+            </ul>
+        </section>
+
+        <section class="main-section" id="JavaScript_and_Java">
+            <header>JavaScript and Java</header>
+            <p>JavaScript and Java are similar in some ways but fundamentally different.</p>
+            <p>JavaScript was influenced by Java but has different syntax.</p>
+            <code> // JavaScript variable
+                let x = 5;</code>
+            <ul>
+                <li>Java is compiled, JavaScript is interpreted</li>
+                <li>Java is strongly typed, JavaScript is dynamically typed</li>
+            </ul>
+        </section>
+
+        <section class="main-section" id="Variables">
+            <header>Variables</header>
+            <p>You use variables as symbolic names for values in your application.</p>
+            <p>Variable names can contain letters, digits, underscores, and dollar signs.</p>
+            <code>var x = 42; // Global variable
+                let y = 13; // Block-scoped variable</code>
+            <p>JavaScript has three ways to declare variables:</p>
+            <ul>
+                <li>var</li>
+                <li>let</li>
+                <li>const</li>
+            </ul>
+        </section>
+
+        <section class="main-section" id="Data_Types">
+            <header>Data Types</header>
+            <p>The latest ECMAScript standard defines eight data types:</p>
+            <p>Seven primitive data types and Object.</p>
+            <code>typeof "John" // Returns "string"</code>
+            <ul>
+                <li>Boolean</li>
+                <li>Null</li>
+                <li>Undefined</li>
+                <li>Number</li>
+                <li>BigInt</li>
+                <li>String</li>
+                <li>Symbol</li>
+                <li>Object</li>
+            </ul>
+        </section>
+
+        <section class="main-section" id="Functions">
+            <header>Functions</header>
+            <p>A function is a block of code designed to perform a particular task.</p>
+            <p>Functions are executed when they are called.</p>
+            <code>function myFunction(p1, p2) {
+                return p1 * p2;
+            }</code>
+            <p>Functions can be defined in several ways:</p>
+            <ul>
+                <li>Function declarations</li>
+                <li>Function expressions</li>
+                <li>Arrow functions</li>
+            </ul>
+        </section>
     </main>
+    <script>
+document.addEventListener('scroll', () => {
+  const sections = document.querySelectorAll('.main-section');
+  let currentId = '';
+  sections.forEach(section => {
+    const rect = section.getBoundingClientRect();
+    if(rect.top <= 80 && rect.bottom > 80) {
+      currentId = section.id;
+    }
+  });
+  document.querySelectorAll('.nav-link').forEach(link => {
+    link.classList.toggle('active', link.getAttribute('href') === '#' + currentId);
+  });
+});
+</script>
 </body>
 </html>
