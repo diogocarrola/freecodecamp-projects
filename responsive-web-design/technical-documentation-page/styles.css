@@ -1,0 +1,130 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    background: #f8fafc;
+    color: #222;
+    display: flex;
+}
+
+/* Navbar Styles */
+#navbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 260px;
+    height: 100vh;
+    background: #fff;
+    border-right: 1px solid #e5e7eb;
+    padding: 32px 24px;
+    overflow-y: auto;
+    box-shadow: 2px 0 8px rgba(0,0,0,0.03);
+}
+
+#navbar header {
+    font-size: 2em;
+    font-weight: 700;
+    margin-bottom: 32px;
+    color: #2563eb;
+    letter-spacing: 1px;
+}
+
+.nav-link {
+    display: block;
+    padding: 12px 0;
+    text-decoration: none;
+    color: #222;
+    font-size: 1.1em;
+    border-bottom: 1px solid #e5e7eb;
+    transition: background 0.2s, color 0.2s;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    background: #f1f5f9;
+    color: #2563eb;
+    outline: none;
+}
+
+.nav-link.active {
+    background: #e0e7ff;
+    color: #1e40af;
+    font-weight: 600;
+}
+
+/* Main Content Styles */
+#main-doc {
+    margin-left: 260px;
+    padding: 40px 32px;
+    flex: 1;
+    background: #f8fafc;
+    min-height: 100vh;
+}
+
+.main-section {
+    margin-bottom: 48px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.main-section header {
+    font-size: 1.6em;
+    font-weight: 600;
+    margin-bottom: 18px;
+    color: #2563eb;
+}
+
+.main-section p {
+    margin-bottom: 16px;
+    font-size: 1.08em;
+    max-width: 700px;
+}
+
+code {
+    display: block;
+    background: #f1f5f9;
+    padding: 16px;
+    margin: 18px 0;
+    border-radius: 6px;
+    font-family: 'Fira Mono', 'Courier New', monospace;
+    border-left: 4px solid #2563eb;
+    color: #1e293b;
+    font-size: 1em;
+    overflow-x: auto;
+}
+
+ul {
+    margin-left: 24px;
+    margin-bottom: 16px;
+    max-width: 700px;
+}
+
+li {
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+    #navbar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        box-shadow: none;
+        border-right: none;
+        border-bottom: 1px solid #e5e7eb;
+        padding: 20px 12px;
+    }
+    #main-doc {
+        margin-left: 0;
+        padding: 24px 12px;
+    }
+}
