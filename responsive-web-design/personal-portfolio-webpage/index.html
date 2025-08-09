@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diogo Carrola - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar - FCC Requirement -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">Diogo Carrola</div>
+            <ul class="nav-links">
+                <li><a href="#welcome-section">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Welcome Section - FCC Requirement -->
+    <section id="welcome-section">
+        <div class="hero-section">
+            <!-- Profile Image -->
+            <div class="profile-container">
+                <div class="profile-frame">
+                    <div class="profile-image-placeholder">
+                        <span class="material-icons">person</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Hero Content -->
+            <div class="hero-content">
+                <h1>Diogo Carrola</h1>
+                <p class="welcome-text">Developer • Scout • Builder</p>
+                
+                <!-- Action Buttons -->
+                <div class="button-group">
+                    <a href="#projects" class="btn btn-primary">
+                        <span class="material-icons">work</span>
+                        View Projects
+                    </a>
+                    <!-- Profile Link - FCC Requirement -->
+                    <a id="profile-link" href="https://github.com/diogocarrola" target="_blank" class="btn btn-secondary">
+                        <span class="material-icons">code</span>
+                        GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section - FCC Requirement -->
+    <section id="projects">
+        <div class="projects-container">
+            <h2 class="projects-title">My Projects</h2>
+            <div class="projects-grid">
+                
+                <!-- Project 1 - FCC Requirement: project-tile -->
+                <div class="project-tile">
+                    <div class="project-image">
+                        <span class="material-icons">laptop_mac</span>
+                    </div>
+                    <div class="project-content">
+                        <h3>Personal Portfolio</h3>
+                        <p>A responsive portfolio website built with HTML, CSS, and JavaScript featuring clean design and smooth animations.</p>
+                        <div class="project-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://diogocarrola.github.io/" target="_blank">Live Demo</a>
+                            <a href="https://github.com/diogocarrola/diogocarrola.github.io" target="_blank">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-tile">
+                    <div class="project-image">
+                        <span class="material-icons">school</span>
+                    </div>
+                    <div class="project-content">
+                        <h3>FreeCodeCamp Projects</h3>
+                        <p>A collection of projects completed as part of the FreeCodeCamp curriculum, showcasing various web development skills.</p>
+                        <div class="project-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/diogocarrola/freecodecamp-projects" target="_blank">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="about-card">
+            <h2>Hello, I'm Diogo! 👋</h2>
+            <p class="welcome-text">
+                Welcome to my portfolio! I'm a passionate <span class="highlight">Developer</span>,
+                dedicated <span class="highlight">Scout</span> and hands-on
+                <span class="highlight">Builder</span> from Portugal.
+            </p>
+            <p class="welcome-text">
+                I believe in learning by doing, teamwork and making a positive impact through code, community and creativity.
+                Explore my journey through the different aspects of who I am and what I love to create.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <p>&copy; 2025 Diogo Carrola. All rights reserved.</p>
+    </footer>
+</body>
+</html>
