@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taylor Swift - Official Artist Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header id="header">
+        <div class="logo-container">
+            <img id="header-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Taylor_Swift_Logo.png/640px-Taylor_Swift_Logo.png" alt="Taylor Swift Logo">
+        </div>
+        <nav id="nav-bar">
+            <a class="nav-link" href="#music">Music</a>
+            <a class="nav-link" href="#tour">Tour</a>
+            <a class="nav-link" href="#merch">Store</a>
+            <a class="nav-link" href="#about">About</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Taylor Swift</h1>
+                <p class="subtitle">The Eras Tour - Experience the Magic</p>
+                <form id="form" action="https://www.freecodecamp.com/email-submit" method="POST">
+                    <input type="email" id="email" name="email" placeholder="Enter your email for updates" required>
+                    <input type="submit" id="submit" value="Join the Swifties">
+                </form>
+            </div>
+        </section>
+
+        <!-- Music Section -->
+        <section id="music" class="music-section">
+            <h2>Latest Album</h2>
+            <div class="album-showcase">
+                <div class="album-art">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/9/9f/Taylor_Swift_-_1989_%28Taylor%27s_Version%29.png" alt="1989 Taylor's Version">
+                </div>
+                <div class="album-info">
+                    <h3>1989 (Taylor's Version)</h3>
+                    <p>Re-recorded masterpiece featuring vault tracks</p>
+                    <div class="track-list">
+                        <h4>Featured Tracks</h4>
+                        <ul>
+                            <li>"Slut!" (Taylor's Version) [From The Vault]</li>
+                            <li>"Say Don't Go" (Taylor's Version) [From The Vault]</li>
+                            <li>"Now That We Don't Talk" (Taylor's Version) [From The Vault]</li>
+                            <li>"Suburban Legends" (Taylor's Version) [From The Vault]</li>
+                        </ul>
+                    </div>
+                    <button class="stream-btn">Stream Now</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Section -->
+        <section id="how-it-works" class="video-section">
+            <h2>Official Music Video</h2>
+            <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/KudedLV0tP0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </section>
+
+        <!-- Tour Section -->
+        <section id="tour" class="tour-section">
+            <h2>The Eras Tour</h2>
+            <div class="tour-dates">
+                <div class="tour-card">
+                    <h3>North America</h3>
+                    <div class="date">Nov 15, 2024</div>
+                    <p>Toronto, Canada</p>
+                    <p>Rogers Centre</p>
+                    <button class="ticket-btn">Get Tickets</button>
+                </div>
+                <div class="tour-card">
+                    <h3>Europe</h3>
+                    <div class="date">May 9, 2024</div>
+                    <p>Paris, France</p>
+                    <p>Paris La Défense Arena</p>
+                    <button class="ticket-btn">Get Tickets</button>
+                </div>
+                <div class="tour-card">
+                    <h3>Asia</h3>
+                    <div class="date">Mar 2, 2024</div>
+                    <p>Tokyo, Japan</p>
+                    <p>Tokyo Dome</p>
+                    <button class="ticket-btn">Get Tickets</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Merchandise Section -->
+        <section id="merch" class="merch-section">
+            <h2>Official Merchandise</h2>
+            <div class="merch-items">
+                <div class="merch-card">
+                    <img src="https://store.taylorswift.com/cdn/shop/products/TS-1989-CREWNECK-FRONT.jpg" alt="1989 Crewneck">
+                    <h3>1989 Crewneck</h3>
+                    <div class="price">$75.00</div>
+                    <button class="buy-btn">Add to Cart</button>
+                </div>
+                <div class="merch-card">
+                    <img src="https://store.taylorswift.com/cdn/shop/products/TS-THEERASTOUR-TEE-FRONT.jpg" alt="Eras Tour T-Shirt">
+                    <h3>Eras Tour Tee</h3>
+                    <div class="price">$45.00</div>
+                    <button class="buy-btn">Add to Cart</button>
+                </div>
+                <div class="merch-card">
+                    <img src="https://store.taylorswift.com/cdn/shop/products/TS-MIDNIGHTS-VINYL-FRONT.jpg" alt="Midnights Vinyl">
+                    <h3>Midnights Vinyl</h3>
+                    <div class="price">$35.00</div>
+                    <button class="buy-btn">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <h2>About Taylor</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Taylor Swift is a multiple Grammy-winning American singer, songwriter, and producer. With numerous record-breaking achievements, she has become one of the most influential artists of our generation.</p>
+                    <div class="achievements">
+                        <div class="achievement">
+                            <div class="number">14</div>
+                            <div class="label">Grammy Awards</div>
+                        </div>
+                        <div class="achievement">
+                            <div class="number">200+</div>
+                            <div class="label">Million Records Sold</div>
+                        </div>
+                        <div class="achievement">
+                            <div class="number">10</div>
+                            <div class="label">Studio Albums</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Taylor_Swift_at_the_2023_MTV_Video_Music_Awards_%283%29.png/640px-Taylor_Swift_at_the_2023_MTV_Video_Music_Awards_%283%29.png" alt="Taylor Swift">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+                <a href="#">TikTok</a>
+                <a href="#">YouTube</a>
+            </div>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact</a>
+            </div>
+            <p>&copy; 2024 Taylor Swift. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
