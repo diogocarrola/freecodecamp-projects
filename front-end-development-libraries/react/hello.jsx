@@ -1,7 +1,14 @@
-const MyComponent = function() {
-  // Change code below this line
-  return (
-    <div>Some text content</div>
-  );
-  // Change code above this line
-}
+class MyComponent extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    // Change code below this line
+    return (
+      <div>
+        <h1>Hello React!</h1>
+      </div>
+    )
+    // Change code above this line
+  }
+};
