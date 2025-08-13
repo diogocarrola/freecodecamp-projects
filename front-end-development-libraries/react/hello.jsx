@@ -1,21 +1,38 @@
-const ChildComponent = () => {
+const TypesOfFruit = () => {
   return (
     <div>
-      <p>I am the child</p>
+      <h2>Fruits:</h2>
+      <ul>
+        <li>Apples</li>
+        <li>Blueberries</li>
+        <li>Strawberries</li>
+        <li>Bananas</li>
+      </ul>
     </div>
   );
 };
 
-class ParentComponent extends React.Component {
+const Fruits = () => {
+  return (
+    <div>
+      { /* Change code below this line */ }
+      <TypesOfFruit />
+      { /* Change code above this line */ }
+    </div>
+  );
+};
+
+class TypesOfFood extends React.Component {
   constructor(props) {
     super(props);
   }
+
   render() {
     return (
       <div>
-        <h1>I am the parent</h1>
+        <h1>Types of Food:</h1>
         { /* Change code below this line */ }
-        <ChildComponent />
+        <Fruits />
         { /* Change code above this line */ }
       </div>
     );
