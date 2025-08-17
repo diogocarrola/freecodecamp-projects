@@ -6,10 +6,13 @@ class MyComponent extends React.Component {
     }
   }
   render() {
+    // Change code below this line
+    const name = this.state.name
+    // Change code above this line
     return (
       <div>
         { /* Change code below this line */ }
-        <h1>{this.state.name}</h1>
+        <h1>{name}</h1>
         { /* Change code above this line */ }
       </div>
     );
