@@ -1,32 +1,48 @@
-class GateKeeper extends React.Component {
+const textAreaStyles = {
+  width: 235,
+  margin: 5
+};
+
+class MyToDoList extends React.Component {
   constructor(props) {
     super(props);
+    // Change code below this line
     this.state = {
-      input: ''
+      userInput: '',
+      toDoList: []
     };
+    // Change code above this line
+    this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
   }
-  handleChange(event) {
-    this.setState({ input: event.target.value })
+  handleSubmit() {
+    const itemsArray = this.state.userInput.split(',');
+    this.setState({
+      toDoList: itemsArray
+    });
+  }
+  handleChange(e) {
+    this.setState({
+      userInput: e.target.value
+    });
   }
   render() {
-    let inputStyle = {
-      border: '1px solid black'
-    };
-    // Change code below this line
-    if (this.state.input.length > 15) {
-      inputStyle.border = '3px solid red';
-    }
-    // Change code above this line
+    const items = this.state.toDoList.map((item, index) => (
+      <li key={index}>{item}</li>
+    )); // Change this line
     return (
       <div>
-        <h3>Don't Type Too Much:</h3>
-        <input
-          type="text"
-          style={inputStyle}
-          value={this.state.input}
-          onChange={this.handleChange} />
+        <textarea
+          onChange={this.handleChange}
+          value={this.state.userInput}
+          style={textAreaStyles}
+          placeholder='Separate Items With Commas'
+        />
+        <br />
+        <button onClick={this.handleSubmit}>Create List</button>
+        <h1>My "To Do" List:</h1>
+        <ul>{items}</ul>
       </div>
     );
   }
-};
+}
