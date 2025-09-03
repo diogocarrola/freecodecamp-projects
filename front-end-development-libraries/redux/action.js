@@ -1,35 +1,47 @@
-const LOGIN = 'LOGIN';
-const LOGOUT = 'LOGOUT';
+const REQUESTING_DATA = 'REQUESTING_DATA'
+const RECEIVED_DATA = 'RECEIVED_DATA'
 
-const defaultState = {
-  authenticated: false
+const requestingData = () => { return {type: REQUESTING_DATA} }
+const receivedData = (data) => { return {type: RECEIVED_DATA, users: data.users} }
+
+const handleAsync = () => {
+  return function(dispatch) {
+    // Dispatch request action here
+    dispatch(requestingData());
+
+    setTimeout(function() {
+      let data = {
+        users: ['Jeff', 'William', 'Alice']
+      }
+      // Dispatch received data action here
+      dispatch(receivedData(data));
+    }, 2500);
+  }
 };
 
-const authReducer = (state = defaultState, action) => {
-  switch (action.type) {
-    case LOGIN:
+const defaultState = {
+  fetching: false,
+  users: []
+};
+
+const asyncDataReducer = (state = defaultState, action) => {
+  switch(action.type) {
+    case REQUESTING_DATA:
       return {
-        authenticated: true
+        fetching: true,
+        users: []
       }
-    case LOGOUT:
+    case RECEIVED_DATA:
       return {
-        authenticated: false
+        fetching: false,
+        users: action.users
       }
     default:
       return state;
   }
 };
 
-const store = Redux.createStore(authReducer);
-
-const loginUser = () => {
-  return {
-    type: LOGIN
-  }
-};
-
-const logoutUser = () => {
-  return {
-    type: LOGOUT
-  }
-};
+const store = Redux.createStore(
+  asyncDataReducer,
+  Redux.applyMiddleware(ReduxThunk.default)
+);
