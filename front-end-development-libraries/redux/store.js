@@ -1,27 +1,28 @@
-const ADD_NOTE = 'ADD_NOTE';
+const ADD_TO_DO = 'ADD_TO_DO';
 
-const notesReducer = (state = 'Initial State', action) => {
+// A list of strings representing tasks to do:
+const todos = [
+  'Go to the store',
+  'Clean the house',
+  'Cook dinner',
+  'Learn to code',
+];
+
+const immutableReducer = (state = todos, action) => {
   switch(action.type) {
-    // Change code below this line
-    case ADD_NOTE:
-      return action.text;
-    // Change code above this line
+    case ADD_TO_DO:
+      // Don't mutate state here or the tests will fail
+      return [...state, action.todo];
     default:
       return state;
   }
 };
 
-const addNoteText = (note) => {
-  // Change code below this line
+const addToDo = (todo) => {
   return {
-    type: ADD_NOTE,
-    text: note
-  };
-  // Change code above this line
-};
+    type: ADD_TO_DO,
+    todo
+  }
+}
 
-const store = Redux.createStore(notesReducer);
-
-console.log(store.getState()); // 'Initial State'
-store.dispatch(addNoteText('Hello!'));
-console.log(store.getState()); // 'Hello!'
+const store = Redux.createStore(immutableReducer);
