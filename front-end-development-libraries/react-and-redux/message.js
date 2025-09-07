@@ -1,8 +1,15 @@
-const state = [];
+const addMessage = (message) => {
+  return {
+    type: 'ADD',
+    message: message
+  }
+};
 
 // Change code below this line
-const mapStateToProps = (state) => {
+const mapDispatchToProps = (dispatch) => {
   return {
-    messages: state
+    submitNewMessage: function(message) {
+      dispatch(addMessage(message));
+    }
   };
 };
