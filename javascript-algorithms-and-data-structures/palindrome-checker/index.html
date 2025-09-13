@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome Checker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1 class="logo">Palindrome<span>Checker</span></h1>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main">
+            <div class="search-container">
+                <div class="search-box">
+                    <input type="text" id="text-input" class="search-input" placeholder="Enter a word or phrase to check...">
+                    <button id="check-btn" class="search-button">
+                        <span class="material-icons">search</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Result Display -->
+            <div id="result" class="result">
+                <div class="result-placeholder">
+                    <span class="material-icons">help_outline</span>
+                    <p>Enter text above to check if it's a palindrome</p>
+                </div>
+            </div>
+
+            <!-- Simple Info Section -->
+            <div class="info">
+                <div class="info-card">
+                    <h3>What is a Palindrome?</h3>
+                    <p>A word, phrase, or sequence that reads the same backwards as forwards, ignoring punctuation, case, and spacing.</p>
+                    <div class="examples">
+                        <strong>Examples:</strong> racecar, A man a plan a canal Panama, never odd or even
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Palindrome Checker • FreeCodeCamp Project</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

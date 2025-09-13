@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #1a73e8;
+    --primary-hover: #1669d9;
+    --text-primary: #202124;
+    --text-secondary: #5f6368;
+    --background: #ffffff;
+    --surface: #f8f9fa;
+    --border: #dadce0;
+    --shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+    --success: #34a853;
+    --error: #ea4335;
+    
+    --font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --border-radius: 24px;
+    --transition: all 0.2s ease;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--background);
+    color: var(--text-primary);
+    line-height: 1.5;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    padding: 40px 0 20px;
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: var(--text-primary);
+}
+
+.logo span {
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+/* Main Content */
+.main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+/* Search Box */
+.search-container {
+    margin-bottom: 30px;
+}
+
+.search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--border);
+    border-radius: var(--border-radius);
+    padding: 8px 16px;
+    transition: var(--transition);
+    background: var(--background);
+}
+
+.search-box:focus-within {
+    box-shadow: var(--shadow);
+    border-color: transparent;
+}
+
+.search-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 12px 8px;
+    font-size: 16px;
+    background: transparent;
+    color: var(--text-primary);
+}
+
+.search-input::placeholder {
+    color: var(--text-secondary);
+}
+
+.search-button {
+    background: var(--primary-color);
+    border: none;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition);
+    color: white;
+}
+
+.search-button:hover {
+    background: var(--primary-hover);
+    transform: scale(1.05);
+}
+
+/* Result Section */
+.result {
+    min-height: 120px;
+    margin-bottom: 30px;
+}
+
+.result-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--text-secondary);
+    padding: 30px;
+}
+
+.result-placeholder .material-icons {
+    font-size: 48px;
+    margin-bottom: 16px;
+    opacity: 0.5;
+}
+
+.result-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 12px;
+    background: var(--surface);
+    margin: 10px 0;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.result-palindrome {
+    color: var(--success);
+    border-left: 4px solid var(--success);
+}
+
+.result-not-palindrome {
+    color: var(--error);
+    border-left: 4px solid var(--error);
+}
+
+.result-text {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.result-text .material-icons {
+    font-size: 24px;
+}
+
+/* Info Section */
+.info {
+    margin-top: 0;
+}
+
+.info-card {
+    background: var(--surface);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+}
+
+.info-card h3 {
+    margin-bottom: 12px;
+    color: var(--text-primary);
+    font-size: 18px;
+}
+
+.info-card p {
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+    line-height: 1.6;
+}
+
+.examples {
+    color: var(--text-secondary);
+    font-size: 14px;
+    padding: 12px;
+    background: rgba(26, 115, 232, 0.05);
+    border-radius: 8px;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    color: var(--text-secondary);
+    font-size: 14px;
+    margin-top: 30px;
+    border-top: 1px solid var(--border);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        padding: 16px;
+    }
+    
+    .logo {
+        font-size: 2rem;
+    }
+    
+    .search-box {
+        padding: 6px 12px;
+    }
+    
+    .search-input {
+        font-size: 14px;
+    }
+    
+    .result-text {
+        font-size: 16px;
+    }
+    
+    .info-card {
+        padding: 16px;
+    }
+}
