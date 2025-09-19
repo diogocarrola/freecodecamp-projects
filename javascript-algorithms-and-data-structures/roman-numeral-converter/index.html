@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roman Numeral Converter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header with medieval styling -->
+        <header class="header">
+            <div class="header-decoration">
+                <div class="decoration-left">❖</div>
+                <h1 class="logo">NUMERUS ROMANUS</h1>
+                <div class="decoration-right">❖</div>
+            </div>
+            <p class="subtitle">Convert Arabic numerals to Ancient Roman</p>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main">
+            <div class="converter-container">
+                <div class="input-section">
+                    <label for="number" class="input-label">Enter Arabic Number</label>
+                    <div class="input-box">
+                        <input type="number" id="number" class="number-input" placeholder="Enter number 1-3999" min="1" max="3999">
+                        <button id="convert-btn" class="convert-button">
+                            <span class="button-text">Convert</span>
+                            <span class="material-icons">arrow_forward</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Output Display -->
+            <div id="output" class="output">
+                <div class="output-placeholder">
+                    <div class="scroll-icon">📜</div>
+                    <p>Your Roman numeral will appear here</p>
+                </div>
+            </div>
+
+            <!-- Reference Section -->
+            <div class="reference">
+                <div class="reference-card">
+                    <h3 class="reference-title">Sacred Symbols of Rome</h3>
+                    <div class="reference-grid">
+                        <div class="reference-item">
+                            <span class="roman">I</span>
+                            <span class="separator">—</span>
+                            <span class="arabic">1</span>
+                        </div>
+                        <div class="reference-item">
+                            <span class="roman">IV</span>
+                            <span class="separator">—</span>
+                            <span class="arabic">4</span>
+                        </div>
+                        <div class="reference-item">
+                            <span class="roman">V</span>
+                            <span class="separator">—</span>
+                            <span class="arabic">5</span>
+                        </div>
+                        <div class="reference-item">
+                            <span class="roman">IX</span>
+                            <span class="separator">—</span>
+                            <span class="arabic">9</span>
+                        </div>
+                        <div class="reference-item">
+                            <span class="roman">X</span>
+                            <span class="separator">—</span>
+                            <span class="arabic">10</span>
+                        </div>
+                        <div class="reference-item">
+                            <span class="roman">XL</span>
+                            <span class="separator">—</span>
+                            <span class="arabic">40</span>
+                        </div>
+                        <div class="reference-item">
+                            <span class="roman">L</span>
+                            <span class="separator">—</span>
+                            <span class="arabic">50</span>
+                        </div>
+                        <div class="reference-item">
+                            <span class="roman">XC</span>
+                            <span class="separator">—</span>
+                            <span class="arabic">90</span>
+                        </div>
+                        <div class="reference-item">
+                            <span class="roman">C</span>
+                            <span class="separator">—</span>
+                            <span class="arabic">100</span>
+                        </div>
+                        <div class="reference-item">
+                            <span class="roman">CD</span>
+                            <span class="separator">—</span>
+                            <span class="arabic">400</span>
+                        </div>
+                        <div class="reference-item">
+                            <span class="roman">D</span>
+                            <span class="separator">—</span>
+                            <span class="arabic">500</span>
+                        </div>
+                        <div class="reference-item">
+                            <span class="roman">CM</span>
+                            <span class="separator">—</span>
+                            <span class="arabic">900</span>
+                        </div>
+                        <div class="reference-item">
+                            <span class="roman">M</span>
+                            <span class="separator">—</span>
+                            <span class="arabic">1000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-decoration"></div>
+            <p>Roman Numeral Converter • FreeCodeCamp Project</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
