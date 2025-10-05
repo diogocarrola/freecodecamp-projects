@@ -20,8 +20,17 @@
       .attr('y', (d, i) => h - 3 * d)
       .attr('width', 25)
       .attr('height', (d, i) => 3 * d)
-    // Add your code below this line
       .attr('fill', 'navy');
+
+    // Add your code below this line
+    svg.selectAll('text')
+       .data(dataset)
+       .enter()
+       .append('text')
+       .attr('x', (d, i) => i * 30)
+       .attr('y', (d, i) => h - (3 * d) - 3)
+       .text(d => d);
     // Add your code above this line
   </script>
+  <body></body>
 </body>
