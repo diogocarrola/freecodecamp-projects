@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>US Phone Validator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo-container">
+                <span class="material-icons">phone</span>
+                <h1>Phone Validator</h1>
+            </div>
+            <p class="subtitle">Check if a US phone number is valid</p>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main">
+            <!-- Input Section -->
+            <div class="input-section">
+                <div class="input-group">
+                    <label for="user-input">Enter Phone Number</label>
+                    <input type="text" id="user-input" placeholder="e.g., 555-555-5555 or (555) 555-5555">
+                    <div class="hint">Enter a US phone number with or without country code</div>
+                </div>
+
+                <div class="button-group">
+                    <button id="check-btn" class="btn btn-primary">
+                        <span class="material-icons">check</span>
+                        Check Number
+                    </button>
+                    <button id="clear-btn" class="btn btn-secondary">
+                        <span class="material-icons">clear</span>
+                        Clear Results
+                    </button>
+                </div>
+            </div>
+
+            <!-- Results Display -->
+            <div id="results-div" class="results-section">
+                <div class="results-header">
+                    <span class="material-icons">history</span>
+                    <h3>Validation Results</h3>
+                </div>
+                <div class="results-content">
+                    <div class="empty-state">
+                        <span class="material-icons">info</span>
+                        <p>No results yet. Enter a phone number and click "Check Number"</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Examples -->
+            <div class="examples-section">
+                <h3>Valid Formats</h3>
+                <div class="examples-grid">
+                    <div class="example-card valid">
+                        <span class="material-icons">check_circle</span>
+                        <div class="example-text">555-555-5555</div>
+                    </div>
+                    <div class="example-card valid">
+                        <span class="material-icons">check_circle</span>
+                        <div class="example-text">(555) 555-5555</div>
+                    </div>
+                    <div class="example-card valid">
+                        <span class="material-icons">check_circle</span>
+                        <div class="example-text">1 555-555-5555</div>
+                    </div>
+                    <div class="example-card invalid">
+                        <span class="material-icons">cancel</span>
+                        <div class="example-text">555-5555 (too short)</div>
+                    </div>
+                    <div class="example-card invalid">
+                        <span class="material-icons">cancel</span>
+                        <div class="example-text">2 555-555-5555 (invalid country code)</div>
+                    </div>
+                    <div class="example-card invalid">
+                        <span class="material-icons">cancel</span>
+                        <div class="example-text">123**&!!asdf# (contains letters/symbols)</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>US Telephone Number Validator • FreeCodeCamp Project</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
