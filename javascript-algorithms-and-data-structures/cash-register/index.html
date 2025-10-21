@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cash Register</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>Cash Register</h1>
+            <p>Calculate change for cash transactions</p>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main">
+            <!-- Cash Drawer Display -->
+            <div class="drawer-section">
+                <h2>Cash in Drawer (CID)</h2>
+                <div class="drawer-grid" id="drawer-display">
+                    <!-- Will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Transaction Section -->
+            <div class="transaction-section">
+                <div class="price-display">
+                    <div class="price-label">Item Price</div>
+                    <div class="price-value">$<span id="price-display">0.00</span></div>
+                </div>
+
+                <div class="input-group">
+                    <label for="cash">Cash Received</label>
+                    <div class="input-with-icon">
+                        <span class="currency-icon">$</span>
+                        <input type="number" id="cash" step="0.01" min="0" placeholder="Enter amount received">
+                    </div>
+                </div>
+
+                <button id="purchase-btn" class="purchase-btn">
+                    <span class="material-icons">point_of_sale</span>
+                    Process Purchase
+                </button>
+
+                <!-- Change Display -->
+                <div class="change-section">
+                    <h3>Change Due</h3>
+                    <div id="change-due" class="change-due">
+                        Enter cash amount and click "Process Purchase"
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Cash Register • FreeCodeCamp Project</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

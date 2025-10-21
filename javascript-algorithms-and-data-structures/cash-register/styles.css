@@ -1,0 +1,428 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --gold: #FFD700;
+    --gold-light: #FFF8DC;
+    --money-green: #228B22;
+    --warm-brown: #8B4513;
+    --cream: #F5F5DC;
+    --paper: #FFF8E1;
+    --text: #2F1B0C;
+    --text-secondary: #5D4037;
+    --border: #D4AF37;
+    
+    --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --radius: 8px;
+    --shadow: 0 2px 4px rgba(139, 69, 19, 0.1);
+}
+
+body {
+    font-family: var(--font);
+    background-color: var(--cream);
+    color: var(--text);
+    line-height: 1.6;
+    min-height: 100vh;
+    background-image: 
+        radial-gradient(circle at 10% 20%, rgba(255, 215, 0, 0.05) 0%, transparent 20%),
+        radial-gradient(circle at 90% 80%, rgba(139, 69, 19, 0.05) 0%, transparent 20%);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header - Simple Scrooge Touch */
+.header {
+    text-align: center;
+    padding: 40px 0 30px;
+    border-bottom: 3px solid var(--border);
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.header::before {
+    content: "💰";
+    position: absolute;
+    left: 50%;
+    top: 10px;
+    transform: translateX(-50%);
+    font-size: 24px;
+    opacity: 0.5;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--warm-brown);
+    margin-bottom: 10px;
+    letter-spacing: -0.5px;
+}
+
+.header p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Main Content */
+.main {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+/* Drawer Section - Simple Money Display */
+.drawer-section {
+    background: var(--paper);
+    border-radius: var(--radius);
+    padding: 25px;
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.drawer-section h2 {
+    margin-bottom: 20px;
+    color: var(--warm-brown);
+    font-size: 1.3rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.drawer-section h2::before {
+    content: "💼";
+    font-size: 1.2rem;
+}
+
+.drawer-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.drawer-item {
+    background: white;
+    border-radius: 6px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 4px solid var(--gold);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.drawer-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.drawer-currency {
+    font-weight: 500;
+    color: var(--text);
+    font-size: 0.95rem;
+}
+
+.drawer-amount {
+    font-weight: 600;
+    color: var(--money-green);
+    font-size: 1rem;
+}
+
+/* Transaction Section */
+.transaction-section {
+    background: var(--paper);
+    border-radius: var(--radius);
+    padding: 25px;
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.price-display {
+    background: linear-gradient(135deg, var(--money-green), #2E8B57);
+    color: white;
+    border-radius: var(--radius);
+    padding: 25px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.price-display::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 40%, rgba(255, 255, 255, 0.1) 50%, transparent 60%);
+    animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+.price-label {
+    font-size: 1rem;
+    margin-bottom: 8px;
+    opacity: 0.9;
+    font-weight: 500;
+}
+
+.price-value {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.input-group {
+    margin-bottom: 10px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--text);
+    font-size: 1rem;
+}
+
+.input-with-icon {
+    position: relative;
+}
+
+.currency-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--money-green);
+}
+
+#cash {
+    width: 100%;
+    padding: 15px 15px 15px 40px;
+    border: 2px solid #ddd;
+    border-radius: var(--radius);
+    font-size: 1rem;
+    font-family: var(--font);
+    background: white;
+    color: var(--text);
+    transition: border-color 0.2s ease;
+}
+
+#cash:focus {
+    outline: none;
+    border-color: var(--money-green);
+    box-shadow: 0 0 0 3px rgba(34, 139, 34, 0.1);
+}
+
+#cash::placeholder {
+    color: var(--text-secondary);
+    opacity: 0.7;
+}
+
+.purchase-btn {
+    background: var(--warm-brown);
+    color: white;
+    border: none;
+    border-radius: var(--radius);
+    padding: 16px 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.purchase-btn:hover {
+    background: #654321;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(139, 69, 19, 0.2);
+}
+
+.purchase-btn:active {
+    transform: translateY(0);
+}
+
+.purchase-btn .material-icons {
+    font-size: 1.2rem;
+}
+
+/* Change Section */
+.change-section {
+    margin-top: 20px;
+}
+
+.change-section h3 {
+    margin-bottom: 15px;
+    color: var(--text);
+    font-size: 1.1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.change-section h3::before {
+    content: "💵";
+    font-size: 1.1rem;
+}
+
+.change-due {
+    background: white;
+    border-radius: var(--radius);
+    padding: 20px;
+    min-height: 100px;
+    font-family: 'Courier New', monospace;
+    font-size: 1rem;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    border: 2px solid #eee;
+    color: var(--text);
+    font-weight: 500;
+}
+
+/* Status Colors */
+.status-open {
+    color: var(--money-green);
+    font-weight: 600;
+    padding: 8px;
+    background: rgba(34, 139, 34, 0.05);
+    border-radius: 4px;
+    border-left: 4px solid var(--money-green);
+}
+
+.status-closed {
+    color: var(--warm-brown);
+    font-weight: 600;
+    padding: 8px;
+    background: rgba(139, 69, 19, 0.05);
+    border-radius: 4px;
+    border-left: 4px solid var(--warm-brown);
+}
+
+.status-insufficient {
+    color: #DC2626;
+    font-weight: 600;
+    padding: 8px;
+    background: rgba(220, 38, 38, 0.05);
+    border-radius: 4px;
+    border-left: 4px solid #DC2626;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 25px 0 15px;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-top: 30px;
+    border-top: 1px solid rgba(212, 175, 55, 0.3);
+    position: relative;
+}
+
+.footer::before {
+    content: "🦆";
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.5;
+}
+
+.footer::after {
+    content: "📈";
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.5;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .main {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .drawer-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    
+    .header h1 {
+        font-size: 2rem;
+    }
+    
+    .price-value {
+        font-size: 2rem;
+    }
+    
+    .drawer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .drawer-section,
+    .transaction-section {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .drawer-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .price-value {
+        font-size: 1.8rem;
+    }
+    
+    #cash {
+        padding: 14px 14px 14px 35px;
+    }
+    
+    .purchase-btn {
+        padding: 14px 20px;
+        font-size: 0.95rem;
+    }
+    
+    .footer::before,
+    .footer::after {
+        display: none;
+    }
+}
